@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Built-By: Zaina.Itriq
+Build-Jdk: 17.0.6
+Class-Path: log4j-1.2-api-2.1.jar log4j-api-2.20.0.jar log4j-core-2.20.0
+ .jar log4j-1.2.17.jar
+Main-Class: com.example.calculator.Calculator
+Created-By: Maven Integration for Eclipse
+
