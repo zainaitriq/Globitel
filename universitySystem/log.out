@@ -1,0 +1,78 @@
+[DEBUG] 2023-04-25 12:29:56,164 universitySystem.DemoMain - Sample debug message
+  [INFO ] 2023-04-25 12:29:56,165 universitySystem.DemoMain - Sample info message
+  [WARN ] 2023-04-25 12:29:56,165 universitySystem.DemoMain - Sample warn message
+  [ERROR] 2023-04-25 12:29:56,165 universitySystem.DemoMain - Sample error message
+  [FATAL] 2023-04-25 12:29:56,165 universitySystem.DemoMain - Sample fatal message
+  [DEBUG] 2023-04-25 12:30:51,575 universitySystem.DemoMain - Sample debug message
+[INFO ] 2023-04-25 12:30:51,577 universitySystem.DemoMain - Sample info message
+[WARN ] 2023-04-25 12:30:51,577 universitySystem.DemoMain - Sample warn message
+[ERROR] 2023-04-25 12:30:51,577 universitySystem.DemoMain - Sample error message
+[FATAL] 2023-04-25 12:30:51,577 universitySystem.DemoMain - Sample fatal message
+[INFO ] 2023-04-25 15:11:10,417 universitySystem.DemoMain - instructor added
+[INFO ] 2023-04-25 15:11:10,419 universitySystem.DemoMain - instructor added
+[INFO ] 2023-04-25 15:11:42,786 universitySystem.DemoMain - instructor added
+[INFO ] 2023-04-25 15:11:42,788 universitySystem.DemoMain - instructor added
+[INFO ] 2023-04-25 15:12:10,641 universitySystem.DemoMain - instructor added
+[INFO ] 2023-04-25 15:12:10,642 universitySystem.DemoMain - instructor added
+[INFO ] 2023-04-25 15:16:10,823 universitySystem.DemoMain - instructor added
+[INFO ] 2023-04-25 15:16:10,825 universitySystem.DemoMain - instructor added
+[INFO ] 2023-04-25 15:16:10,825 universitySystem.DemoMain - instructor returned successfully
+[INFO ] 2023-04-25 15:16:26,933 universitySystem.DemoMain - instructor added
+[INFO ] 2023-04-25 15:16:26,934 universitySystem.DemoMain - instructor added
+[INFO ] 2023-04-25 15:16:26,934 universitySystem.DemoMain - instructor returned successfully
+[INFO ] 2023-04-25 15:42:10,176 universitySystem.DemoMain - instructor added
+[INFO ] 2023-04-25 15:42:10,177 universitySystem.DemoMain - instructor added
+[INFO ] 2023-04-25 15:42:10,178 universitySystem.DemoMain - instructor returned successfully
+[INFO ] 2023-04-25 15:43:20,477 universitySystem.DemoMain - instructor added
+[INFO ] 2023-04-25 15:43:20,479 universitySystem.DemoMain - instructor added
+[INFO ] 2023-04-25 15:43:20,479 universitySystem.DemoMain - instructor returned successfully
+[INFO ] 2023-04-25 16:17:28,164 universitySystem.DemoMain - instructor added
+[INFO ] 2023-04-25 16:17:28,166 universitySystem.DemoMain - instructor added
+[INFO ] 2023-04-25 16:17:28,166 universitySystem.DemoMain - instructor returned successfully
+[INFO ] 2023-04-26 09:36:26,986 universitySystem.DemoMain - database connected succefully
+[INFO ] 2023-04-26 09:36:26,987 universitySystem.DemoMain - instructor added
+[INFO ] 2023-04-26 09:36:27,016 universitySystem.DemoMain - database connected succefully
+[INFO ] 2023-04-26 09:36:27,017 universitySystem.DemoMain - instructor added
+[INFO ] 2023-04-26 09:36:27,017 universitySystem.DemoMain - instructor returned successfully
+[INFO ] 2023-04-26 09:42:40,365 universitySystem.DemoMain - database connected succefully
+[INFO ] 2023-04-26 09:42:40,398 universitySystem.DemoMain - instructor added
+[INFO ] 2023-04-26 09:42:40,432 universitySystem.DemoMain - database connected succefully
+[INFO ] 2023-04-26 09:42:40,435 universitySystem.DemoMain - instructor added
+[INFO ] 2023-04-26 09:42:40,436 universitySystem.DemoMain - instructor returned successfully
+[INFO ] 2023-04-26 09:49:08,139 universitySystem.DemoMain - database connected succefully
+[ERROR] 2023-04-26 09:49:08,171 universitySystem.DemoMain - java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'abdallah@htu.edu.jo' for key 'instructor.email_UNIQUE'
+[INFO ] 2023-04-26 09:49:08,200 universitySystem.DemoMain - database connected succefully
+[ERROR] 2023-04-26 09:49:08,202 universitySystem.DemoMain - java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'yaman@htu.edu.jo' for key 'instructor.email_UNIQUE'
+[INFO ] 2023-04-26 09:49:08,220 universitySystem.DemoMain - database connected succefully
+[INFO ] 2023-04-26 09:49:08,232 universitySystem.DemoMain - instructors listed successfully
+[INFO ] 2023-04-26 09:49:08,233 universitySystem.DemoMain - instructors listed successfully
+[INFO ] 2023-04-26 09:49:08,233 universitySystem.DemoMain - instructors listed successfully
+[INFO ] 2023-04-26 09:49:08,233 universitySystem.DemoMain - instructors listed successfully
+[INFO ] 2023-04-26 09:49:08,233 universitySystem.DemoMain - instructors listed successfully
+[INFO ] 2023-04-26 09:49:08,234 universitySystem.DemoMain - instructors listed successfully
+[INFO ] 2023-04-26 09:49:08,234 universitySystem.DemoMain - instructors listed successfully
+[INFO ] 2023-04-26 09:49:08,235 universitySystem.DemoMain - instructors listed successfully
+[INFO ] 2023-04-26 09:49:08,235 universitySystem.DemoMain - instructors listed successfully
+[INFO ] 2023-04-26 09:49:08,235 universitySystem.DemoMain - instructors listed successfully
+[INFO ] 2023-04-26 09:49:08,235 universitySystem.DemoMain - instructors listed successfully
+[INFO ] 2023-04-26 09:49:08,236 universitySystem.DemoMain - instructors listed successfully
+[INFO ] 2023-04-26 09:49:08,236 universitySystem.DemoMain - instructors listed successfully
+[INFO ] 2023-04-26 10:26:43,537 universitySystem.DemoMain - database connected succefully
+[ERROR] 2023-04-26 10:26:43,568 com.dao.InstructorDAO - java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'abdallah@htu.edu.jo' for key 'instructor.email_UNIQUE'
+[INFO ] 2023-04-26 10:26:43,593 universitySystem.DemoMain - database connected succefully
+[ERROR] 2023-04-26 10:26:43,595 com.dao.InstructorDAO - java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'yaman@htu.edu.jo' for key 'instructor.email_UNIQUE'
+[INFO ] 2023-04-26 10:26:43,614 universitySystem.DemoMain - database connected succefully
+[INFO ] 2023-04-26 10:26:43,627 com.dao.InstructorDAO - instructors listed successfully
+[INFO ] 2023-04-26 10:26:43,628 com.dao.InstructorDAO - instructors listed successfully
+[INFO ] 2023-04-26 10:26:43,628 com.dao.InstructorDAO - instructors listed successfully
+[INFO ] 2023-04-26 10:26:43,628 com.dao.InstructorDAO - instructors listed successfully
+[INFO ] 2023-04-26 10:26:43,628 com.dao.InstructorDAO - instructors listed successfully
+[INFO ] 2023-04-26 10:26:43,628 com.dao.InstructorDAO - instructors listed successfully
+[INFO ] 2023-04-26 10:26:43,629 com.dao.InstructorDAO - instructors listed successfully
+[INFO ] 2023-04-26 10:26:43,629 com.dao.InstructorDAO - instructors listed successfully
+[INFO ] 2023-04-26 10:26:43,629 com.dao.InstructorDAO - instructors listed successfully
+[INFO ] 2023-04-26 10:26:43,629 com.dao.InstructorDAO - instructors listed successfully
+[INFO ] 2023-04-26 10:26:43,629 com.dao.InstructorDAO - instructors listed successfully
+[INFO ] 2023-04-26 10:26:43,630 com.dao.InstructorDAO - instructors listed successfully
+[INFO ] 2023-04-26 10:26:43,630 com.dao.InstructorDAO - instructors listed successfully
+[INFO ] 2023-04-26 10:26:43,630 com.dao.InstructorDAO - instructors listed successfully
