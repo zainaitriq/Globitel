@@ -5,6 +5,10 @@ public class Enrollment {
 	private int student_id;
 	private int course_id;
 
+	public Enrollment() {
+		super();
+	}
+
 	public Enrollment(int student_id, int course_id) {
 		super();
 		this.student_id = student_id;

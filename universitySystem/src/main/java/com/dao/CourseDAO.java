@@ -4,6 +4,10 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Time;
+
+import javax.sql.DataSource;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,11 +18,14 @@ import com.model.Course;
 
 public class CourseDAO {
 
-	private static final String INSERT_COURSE_SQL = "INSERT INTO course (name, instructor_id) VALUES (?, ?);";
-	private static final String SELECT_COURSE_BY_ID = "select id,name,instructor_id from course where id =?";
+	private static final String INSERT_COURSE_SQL = "INSERT INTO course (name, instructor_id, capacity, start_time, end_time) VALUES (?, ?, ?, ?, ?);";
+
+//INSERT INTO `university`.`course` (`name`, `instructor_id`, `capacity`, `start_time`, `end_time`) VALUES ('programming', '4', '15', '10:00:00', '12:30:00');
+
+	private static final String SELECT_COURSE_BY_ID = "select id,name,instructor_id, capacity, start_time, end_time from course where id =?";
 	private static final String SELECT_ALL_COURSE = "SELECT * FROM course;";
 	private static final String DELETE_COURSE_SQL = "delete from course where id = ?;";
-	private static final String UPDATE_COURSE_SQL = "UPDATE course SET name = ?, instructor_id = ? WHERE (id = ?);";
+	private static final String UPDATE_COURSE_SQL = "UPDATE course SET name = ?, instructor_id = ? , capacity= ?, start_time = ?, end_time = ? WHERE (id = ?);";
 	private int status = 200;
 
 	static Logger logger = Logger.getLogger(CourseDAO.class);
@@ -38,6 +45,10 @@ public class CourseDAO {
 				PreparedStatement preparedStatement = connection.prepareStatement(INSERT_COURSE_SQL)) {
 			preparedStatement.setString(1, course.getName());
 			preparedStatement.setInt(2, course.getInstructor_id());
+			preparedStatement.setInt(3, course.getCapacity());
+			preparedStatement.setTime(4, course.getStart_time());
+			preparedStatement.setTime(5, course.getEnd_time());
+
 			logger.debug(preparedStatement);
 
 			preparedStatement.executeUpdate();
@@ -66,7 +77,11 @@ public class CourseDAO {
 				String name = rs.getString("name");
 
 				int instructor_id = rs.getInt("instructor_id");
-				course = new Course(id, name, instructor_id);
+				int capacity = rs.getInt("capacity");
+				Time start_time = rs.getTime("start_time");
+				Time end_time = rs.getTime("end_time");
+
+				course = new Course(id, name, instructor_id, capacity, start_time, end_time);
 			}
 			logger.info("Course returned by id successfully");
 
@@ -95,7 +110,11 @@ public class CourseDAO {
 				String name = rs.getString("name");
 				// String email = rs.getString("email");
 				int instructor_id = rs.getInt("instructor_id");
-				course.add(new Course(id, name, instructor_id));
+				int capacity = rs.getInt("capacity");
+				Time start_time = rs.getTime("start_time");
+				Time end_time = rs.getTime("end_time");
+
+				course.add(new Course(id, name, instructor_id, capacity, start_time, end_time));
 			}
 			logger.info("Courses listed successfully");
 
@@ -132,7 +151,10 @@ public class CourseDAO {
 
 			statement.setString(1, course.getName());
 			statement.setInt(2, course.getInstructor_id());
-			statement.setInt(3, course.getId());
+			statement.setInt(3, course.getCapacity());
+			statement.setInt(4, course.getId());
+			statement.setTime(4, course.getStart_time());
+			statement.setTime(5, course.getEnd_time());
 
 			logger.debug(statement);
 
@@ -173,7 +195,5 @@ public class CourseDAO {
 	public void setStatus(int status) {
 		this.status = status;
 	}
-	
-	
 
 }

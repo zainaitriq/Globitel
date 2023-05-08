@@ -59,6 +59,7 @@ public class EnrollmentServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+	
 		// TODO Auto-generated method stub
 		LOGGER.info("Servlet called with GET method.");
 		Map<String, Object> responseData = new HashMap<>();
@@ -112,13 +113,13 @@ public class EnrollmentServlet extends HttpServlet {
 			enrollmentDao.registerStudent(newEnroll);
 			if (enrollmentDao.getStatus() == 200) {
 				responseData.put("status", status);
-				responseData.put("message", "Success");
+				responseData.put("message", enrollmentDao.getMessage());
 
 			} else {
-				response.setStatus(1062);
+				//response.setStatus(1062);
 
-				responseData.put("status", "success");
-				responseData.put("message", "Enrollment added successfully");
+				responseData.put("status", "error");
+				responseData.put("message",enrollmentDao.getMessage());
 
 			}
 
@@ -212,7 +213,7 @@ public class EnrollmentServlet extends HttpServlet {
 				responseData.put("status", "success");
 				responseData.put("message", "Enrollment deleted successfully");
 			} else {
-				response.setStatus(1062);
+		//		response.setStatus(1062);
 
 				responseData.put("status", "error");
 				responseData.put("message", "unable to update instructor");

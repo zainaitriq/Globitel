@@ -197,7 +197,7 @@ public class StudentServlet extends HttpServlet {
 				responseData.put("message", "Student deleted successfully");
 
 			} else {
-				response.setStatus(1062);
+			//	response.setStatus(1062);
 				responseData.put("status", "error");
 				responseData.put("message", "unable to update instructor");
 			}

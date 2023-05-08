@@ -3,6 +3,7 @@ package com.web;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
+import java.sql.Time;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -87,8 +88,11 @@ public class CourseServlet extends HttpServlet {
 			Course newCourse = mapper.readValue(json, Course.class);
 			String name = newCourse.getName();
 			int instructor_id = newCourse.getInstructor_id();
+			int capacity = newCourse.getCapacity();
+			Time start_time= newCourse.getStart_time();
+			Time end_time= newCourse.getEnd_time();
 
-			String jsonResponse = "{ \"name\": \"" + name + ", \"instructor id\": \"" + instructor_id + "\" }";
+			String jsonResponse = "{ \"name\": \"" + name + ", \"instructor_id\": \"" + instructor_id + ", \"capacity\": \"" + capacity +", \"star_time\": \"" + start_time +", \"end_time\": \"" + end_time +"\"  }";
 			int status = response.getStatus();
 			courseDao.insertCourse(newCourse);
 			if (courseDao.getStatus() == 200) {
@@ -96,7 +100,7 @@ public class CourseServlet extends HttpServlet {
 				responseData.put("message", "Course added successfully");
 
 			} else {
-				response.setStatus(1062);
+				//response.setStatus(1062);
 
 				responseData.put("status", "error");
 				responseData.put("message", "unable to add instructor");
@@ -145,7 +149,7 @@ public class CourseServlet extends HttpServlet {
 				responseData.put("status", "success");
 				responseData.put("message", "Course updated successfully");
 			} else {
-				response.setStatus(1062);
+				//response.setStatus(1062);
 
 				responseData.put("status", "error");
 				responseData.put("message", "unable to update instructor");
@@ -184,8 +188,8 @@ public class CourseServlet extends HttpServlet {
 				responseData.put("message", "Course deleted successfully");
 
 			} else {
-				response.setStatus(1062);
-
+			//	response.setStatus(1062);
+//
 				responseData.put("status", "error");
 				responseData.put("message", "unable to update instructor");
 			}
